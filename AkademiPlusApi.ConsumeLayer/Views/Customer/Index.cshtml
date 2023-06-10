@@ -24,8 +24,8 @@
                 <td>@item.AccountNumber</td>
                 <td>@item.CustomerName @item.CustomerSurname</td>
                 <td>@item.CustomerCity/@item.CustomerDistrict</td>
-                <td><a href="#"class="btn btn-outline-danger">Sil</a></td>
-                <td><a href="#"class="btn btn-outline-success">Güncelle</a></td>
+                <td><a href="/Customer/DeleteCustomer/@item.CustomerID"class="btn btn-outline-danger">Sil</a></td>
+                <td><a href="/Customer/UpdateCustomer/@item.CustomerID" class="btn btn-outline-success">Güncelle</a></td>
                 <td><a href="#" class="btn btn-outline-dark">Hesap Hareketleri</a></td>
 
             </tr>
