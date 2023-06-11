@@ -2,6 +2,7 @@
 using AkademiPlusApi.EntityLayer.Concrete;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 
 namespace AkademiPlus.PresentationLayer.Controllers
 {
@@ -39,6 +40,12 @@ namespace AkademiPlus.PresentationLayer.Controllers
         {
             _balanceService.TUpdate(balance);
                 return Ok();
+        }
+        [HttpGet("{id}")]
+        public IActionResult GetBalance(int id)
+        {
+            var values = _balanceService.TGetbyID(id);
+            return Ok(values);
         }
     }
 }
